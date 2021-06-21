@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+h1{
+  color: #61dafb;
+  text-align: center;
+}
+
+div {
+  margin: 15px;
+  display: inline-block;
+  
+}
+
+header, footer{
+  background-color: blanchedalmond;
+}
+
+footer p {
+  text-align: center;
+}
+
