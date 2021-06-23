@@ -1,43 +1,43 @@
 import React, { Component } from 'react'
-import { Button,Modal } from 'react-bootstrap';
+import { Button,Modal,Card } from 'react-bootstrap';
 
 
  class SelectedBeast extends Component {
-    constructor(props){
-        super(props);
-        this.state={
-            width:props.width,
-        }
-    }
-    updateState=()=>{
-        this.setState(
-            {
-                width:"1000px"
-            })
-        }
+    
+
+        
     render() {
         return (
-            <div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+          <>
+          <Modal show={this.props.showdata}>  
+          <Modal.Header closeButton>
+            <Modal.Title>{this.props.data.title}</Modal.Title>
+          </Modal.Header>
+        
+          <Modal.Body>
+          <Card style={{ width: "80%", height: "100%",marginLeft: "7vh" }} bg={'warning'}>
+                            <Card.Img width={200}
+                                height={280}  src={this.props.data.img_url} alt={this.props.data.title} />
+                            <Card.Body>
+
+                                <Card.Text>
+                                    {this.props.data.description}
+                                </Card.Text>
+                            </Card.Body>
+
+
+
+
+                        </Card>
+          </Modal.Body>
+        
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.props.handleFunctionToClose} >Close</Button>
+
+          </Modal.Footer>
+        </Modal>
                 
-            
+           </> 
         )
     }
 }
