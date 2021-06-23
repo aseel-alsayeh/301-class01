@@ -11,10 +11,10 @@ class Main extends Component {
             <div>
                 {
                     Data.map((b, index) => {
-                        return <HornedBeast  key={index} clicks={0} title={b.title} imageUrl={b.image_url} description={b.description} />
+                        return <HornedBeast  key={index} clicks={0} title={b.title} imageUrl={b.image_url} description={b.description} modal={this.props.selectModal}/>
                     })
                 }
-                <SelectedBeast/>
+                
             </div>
 
         )
