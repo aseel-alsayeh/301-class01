@@ -47,4 +47,3 @@ import { Card,Button } from 'react-bootstrap';
 
 export default HornedBeast;
 
-
